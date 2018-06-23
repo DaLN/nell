@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="icons/logo.jpg"/>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="elements.css">
+        <meta charset="utf-8">
+        <title>Nell</title>
+    </head>
+    <body>
+      <div id="loading-scren" style="display: block">
+        <div class="loading"></div>
+      </div>
+
+
+      <div id="error">
+        <div id="error-icon">
+          <img class="login-icon-image" src="/icons/close1.svg" alt=""></img>
+        </div>
+        <br>
+        <br>
+        <div id="error-message">${message}</div>
+      </div>
+
+      <div id="message">
+        <div id="message-icon">
+          <img class="login-icon-image" src="/icons/close2.svg" alt=""></img>
+        </div>
+        <br>
+        <br>
+        <div id="message-message">${message}</div>
+      </div>
+
+      <div id="header">
+              <img src="/icons/nell_text.png" alt="" style="height: 68px; margin-bottom:-12px; margin-top:-12px;">
+
+          <div id="header-icon-holder">
+            <!--
+            <a class="header-icon icon tooltip" href="/#!/report" id="logout-button">
+                <span class="tooltiptext">My reports</span>
+                <img class="icon-image" src="/icons/report.svg" alt=""></img>
+            </a>
+            -->
+
+            <a class="header-icon icon tooltip" href="/#!/login" id="logout-button">
+                <span class="tooltiptext">Log out</span>
+                <img class="icon-image" src="/icons/logout.svg" alt=""></img>
+            </a>
+
+            <a class="header-icon icon tooltip" href="https://nell.co.uk/collections/all">
+                <span class="tooltiptext">Store</span>
+                <img class="icon-image" src="/icons/shop.svg" alt=""></img>
+            </a>
+
+            <a class="header-icon icon tooltip" href="/#!/profile">
+                <span class="tooltiptext">My profile</span>
+                <img class="icon-image" src="/icons/profile.svg" alt=""></img>
+            </a>
+          </div>
+      </div>
+
+      <div id="main"></div>
+
+      <div id="footer">© 2018. All rights reserved. Nell Natural Elements.</div>
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+      <script src="//unpkg.com/navigo@6"></script>
+      <script type="text/javascript" src="global.js"></script>
+      <script type="text/javascript" src="aux.js"></script>
+      <script type="text/javascript" src="actions.js"></script>
+      <script type="text/javascript" src="elements.js"></script>
+      <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

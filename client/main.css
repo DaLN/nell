@@ -1,0 +1,247 @@
+/*  COLORS
+  rgba(66,144,244,1)
+  rgba(244,244,244,1)
+  rgba(255, 240, 0, 1)
+*/
+
+/* FONTS */
+@font-face {
+    font-family: 'gt_walsheim_regular';
+    src: url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-bold-web.eot');
+    src: url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-bold-web.eot?#iefix') format('embedded-opentype'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-bold-web.woff') format('woff'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-bold-web.ttf') format('truetype'),
+         url('https://s3.amazonaws.com/cocoapods/fonts/gt-walsheim-bold-web.svg#gt_walsheim_bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* GENERAL */
+html, body, div {
+    margin: 0;
+    padding: 0;
+    font-family: "gt_walsheim_regular";
+    font-weight: 100;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+#header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255,255,255,1);
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow: 1px 1px rgba(22,22,22,0.4);
+}
+
+#title {
+  margin-left: 12px;
+  font-size: 2.3em;
+  color: rgb(22,22,22);
+}
+
+.header-icon {
+  margin-left: 12px;
+  padding-bottom: 15px;
+}
+
+/* ICON STYLE */
+.icon {
+  width: 38px;
+  height: 38px;
+}
+
+.icon-image {
+  width: 38px;
+  height: 38px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(22,22,22);
+    color: rgb(244,244,244);
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 14px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    right:48px;
+    top:60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* BODY */
+#main {
+  width: 100vw;
+  background-color: rgb(244,244,244);
+}
+
+#chat {
+  width: 66px;
+  height: 66px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 20%;
+}
+
+#chat:hover {
+  background-color: rgba(66,66,66,0.2);
+}
+
+#chat-icon {
+  width: 66px;
+  height: 66px;
+}
+
+/* For text boxes and buttons with icon */
+.button-no1 {
+  cursor: pointer;
+  box-shadow: 1px 1px rgba(66,66,66,0.4);
+}
+
+.button-no1:hover {
+  background-color: rgba(244,66,66,1);
+}
+
+.button-no1:active {
+  box-shadow: 0px 0px rgba(66,66,66,0.4);
+}
+
+.inline-par {
+  cursor: default;
+  display: inline-block;
+  font-size: 22px;
+}
+
+.text-icon {
+  bottom: -9px;
+  position: relative;
+  display: inline-block;
+}
+
+/*FOOTER*/
+#footer {
+  padding-left: 8%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: rgba(255,255,255,1);
+  width: 100%;
+  box-shadow: 0px 0px 1px 1px rgba(188,188,188,0.2);
+}
+
+/* LOADING */
+#loading-scren {
+  z-index: 255;
+  width: 100vw;
+  height: 140vh;
+  background-color: rgba(255,255,255,1);
+}
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -60px 0 0 -88px;
+  background: rgba(66,144,244,1);
+  width: 140px;
+  height: 140px;
+  background-image: url("/icons/logo.jpg");
+  border-radius: 100%;
+  border: 10px solid rgba(255, 240, 0, 1);
+}
+.loading:after {
+  content: '';
+  background: trasparent;
+  width: 140%;
+  height: 140%;
+  position: absolute;
+  border-radius: 100%;
+  top: -20%;
+  left: -20%;
+  opacity: 0.7;
+  box-shadow: rgba(255, 240, 0, 1) -22px -2px 12px -3px;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+
+/* ERRORS */
+#error {
+  z-index: 255;
+  position: absolute;
+  left: 0;
+  top: 5vh;
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  min-height: 20vh;
+  background-color: rgba(222,22,22,1);
+  text-align: center;
+  user-select: none;
+  color: rgba(22,22,22,1);
+  border-radius: 2%;
+  display: none;
+}
+
+#error-message {
+  font-size: 24px;
+}
+
+#error-icon {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+
+#message {
+  z-index: 255;
+  position: absolute;
+  left: 0;
+  top: 5vh;
+  width: 70vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  min-height: 20vh;
+  background-color: rgba(255, 240, 0, 1);
+  text-align: center;
+  user-select: none;
+  color: rgba(66,144,244,1);
+  display: none;
+  border-radius: 2%;
+
+}
+
+#message-message {
+  font-size: 24px;
+}
+
+#message-icon {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}

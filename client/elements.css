@@ -1,0 +1,302 @@
+/* UPLOAD VIEW */
+#upload-view {
+  min-height: 86vh;
+  background-color: rgba(244,244,244,1);
+  width: 100%;
+  padding-top: 10vh;
+  text-align: center;
+}
+
+#upload-form {
+  text-align: left;
+}
+
+/* Doctor specific */
+
+#validate-button {
+  background-color: rgba(144, 244, 120,1);
+  display: none;
+  margin-left: 32px;
+  width: 186px !important;
+}
+
+/* MY REPORTS VIEW */
+#my-reports-view {
+  text-align: center;
+  min-height: 86vh;
+  background-color: rgba(244,244,244,1);
+  width: 100%;
+}
+
+#vitamin-data {
+  padding-top: 32px;
+  width: 100%;
+}
+
+#report-sheet {
+  text-align: center;
+  overflow: hidden;
+  min-height: 86vh;
+  background-color: rgba(244,244,244,1);
+  display: inline-block;
+  width: 100vw;
+}
+
+#report-sheet {
+  width: 84%;
+  background-color: rgba(244,244,244,1);
+  margin-left: 8%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 60px;
+}
+
+#reports-holder {
+  background-color: rgba(66,66,66,1);
+  text-align: left;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.report-sum-wrapper {
+  text-align: left;
+  margin-top: 16px;
+  cursor: pointer;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  display: inline-block;
+  background-color: rgba(255,255,255,1);
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.report-sum-wrapper:hover {
+  background-color: rgba(188,222,244,1);
+}
+
+.report-sum-wrapper:active {
+  box-shadow: 0 8px 6px -6px #777;
+}
+
+
+.report-static-info {
+  text-align: left;
+  width: 88%;
+  background-color: rgba(244,244,244,1);
+  margin-left: 6%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+
+}
+
+#report-static-info h3 {
+  color: rgba(77,77,77,1);
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+#report-static-info p {
+  color: rgba(44,44,44,1);
+}
+
+.dna-info-box {
+  text-align: left;
+  width: 180px;
+  display: inline-block;
+  background-color: rgba(255,255,255,1);
+  margin-bottom: 46px;
+  margin-left: 6%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.dna-info-box:hover {
+  box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.5);
+}
+
+.dna-info-line {
+  padding-bottom: 16px;
+  padding-top: 8px;
+  border-bottom: 1px solid rgba(22,22,22,0.6);
+}
+
+.dna-info-snip {
+  cursor: pointer;
+}
+
+.dna-info-supplement-info {
+  border-bottom: solid rgba(1,1,1,0) !important;
+}
+
+.dna-info-body-holder {
+  display: none;
+}
+
+.blood-chart {
+}
+
+.blood-chart-wrapper {
+  text-align: center;
+  max-width: 900px;
+  margin-left: 6%;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+}
+
+.blood-info-box {
+  margin-left: 6%;
+  display: inline-block;
+  margin-bottom: 16px;
+  padding-right: 12px;
+  padding-top: 20px;
+  margin-top: 6vh;
+  padding-bottom: 12px;
+}
+
+.blood-info-head {
+  border-bottom: 1px solid rgba(66,66,66,0.6);
+  padding-bottom: 6px;
+}
+
+.blood-info-intake {
+  padding-top: 6px;
+}
+
+/* LOGIN VIEW */
+#login_screen {
+  left: 0;
+  top: 0;
+  padding-top: 12vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(222,222,222);
+  text-align: center;
+  user-select: none;
+}
+
+.login-button {
+  text-align: left;
+  padding-left: 4vw;
+  display: inline-block;
+  background-color: rgb(244,244,244);
+  width: 70%;
+  height: 46px;
+  max-width: 510px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  box-shadow: 1px 1px rgba(22,22,22,0.4);
+}
+
+.login-button:hover {
+  /*background-color: rgba(122, 122, 122, 1);*/
+}
+
+.login-button:active {
+  background-color: rgba(122,122,122,1);
+  box-shadow: 0px 0px rgba(22,22,22,0.4);
+}
+
+.login-screen-button {
+  margin: 0px;
+  font: 400 1.3em Roboto;
+  color: rgba(22, 22, 22, 1);
+  margin-left: 3%;
+  display: inline-block;
+}
+
+.login-icon {
+  bottom: -9px;
+  position: relative;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+}
+
+.login-icon-image {
+  height: 32px;
+  width: 32px;
+}
+
+.login-group {
+  width: 80%;
+  max-width: 600px;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.login-label {
+  position: absolute;
+  top: 14px;
+  padding-left: 12px;
+  bottom: 12px;
+  color: rgba(144, 144, 144, 0.8);
+  font: 400 26px Roboto;
+  cursor: text;
+  transition: 0.25s ease;
+}
+
+.login-input {
+  display: block;
+  width: 100%;
+  padding-top: 26px;
+  padding-left: 12px;
+  border: none;
+  border-radius: 0;
+  color:rgba(22,22,22,1);
+  font-size: 26px;
+  transition: 0.3s ease;
+}
+.login-input:valid ~ label {
+  top: 0;
+  font: 700 22px Roboto;
+  color: rgba(244, 244, 244, 0.5);
+}
+.login-input:focus {
+  outline: none;
+}
+.login-input:focus ~ label {
+  top: 0;
+  font: 700 22px Roboto;
+  color: rgba(66,144,244,1);
+}
+.login-input:focus ~ .bar:before {
+  transform: translateX(0);
+}
+.login-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: white !important;
+}
+
+.bar {
+  background: rgba(244, 244, 244, 0.5);
+  content: "";
+  width: 550px;
+  height: 3.6666666667px;
+  transition: 0.3s ease;
+  position: relative;
+}
+.bar:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: rgba(66,144,244,0.6);
+  transform: translateX(-100%);
+}
+
+::selection {
+  background: rgba(66,144,244,0.3);
+}
