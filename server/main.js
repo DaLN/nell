@@ -105,7 +105,6 @@ const handle_upload = async (req, res) => {
 
       req.files.file.mv(`reports/${fname}`);
       res.redirect('/#!/update_reports');
-
     }
 
   } catch(err) {

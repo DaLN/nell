@@ -1,12 +1,14 @@
 /* Insert some view */
 login_view = () =>
-  `<div class="text-center"><button class="btn btn-round text-center" data-toggle="modal" data-target="#loginModal">
+  `<button class="btn btn-round" data-toggle="modal" data-target="#loginModal">
     Login<i class="material-icons">assignment</i>
-</button></div>
+
+</button>
 
 <div class="modal fade" id="loginModal" tabindex="-1" role="">
-    <div class="modal-dialog modal-login .modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-login" role="document">
         <div class="modal-content">
+            <div class="card card-signup card-plain">
                 <div class="modal-body">
                     <form class="form" method="" action="">
                         <div class="card-body">
@@ -15,7 +17,7 @@ login_view = () =>
                                     <span class="input-group-addon">
                                         <i class="material-icons">email</i>
                                     </span>
-                                    <input id="email" type="text" class="form-control" placeholder="Email...">
+                                    <input type="text" class="form-control" placeholder="Email..."  id="email">
                                 </div>
                             </div>
 
@@ -24,15 +26,14 @@ login_view = () =>
                                     <span class="input-group-addon">
                                         <i class="material-icons">lock_outline</i>
                                     </span>
-                                    <input id="password" type="password" placeholder="Password..." class="form-control">
+                                    <input type="password" placeholder="Password..." class="form-control" id="password">
                                 </div>
                             </div>
                         </div>
                     </form>
                 </div>
-
-                <div class="modal-footer justify-content-center" id="login-button">
-                    <a class="btn btn-transparent btn-link btn-wd btn-lg">Get Started</a>
+                <div class="modal-footer justify-content-center">
+                    <a class="btn btn-primary btn-link btn-wd btn-lg" id="login-button">Get Started</a>
                 </div>
             </div>
         </div>
@@ -162,17 +163,10 @@ const upload_view = () => {
         <option value="dna">DNA Sequence</option>
       </select>
     </div>
-    <div class="form-group form-file-upload form-file-multiple">
-    <input type="file" name="file" multiple="" class="inputFileHidden">
-    <div class="input-group">
-        <input type="text" class="form-control inputFileVisible" placeholder="Choose the File">
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-fab btn-round btn-transparent">
-                <i class="material-icons">attach_file</i>
-            </button>
-        </span>
-    </div>
-</div>
+    <div class="form-group form-file-upload form-file-simple bg-transparent">
+      <input type="text" class="form-control inputFileVisible" placeholder="Select file...">
+      <input type="file" name="file" class="inputFileHidden">
+  </div>
     <div class="form-group">
       <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>

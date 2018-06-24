@@ -81,7 +81,7 @@ const init_login_listeners = (id) => {
       } else if (obj['role'] === 'laboratory') {
         _router.navigate('/update_reports');
       }
-
+      //$('.modal-backdrop').fadeOut(150);
     } else {
       display_error(obj['error']);
     }
