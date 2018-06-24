@@ -1,75 +1,89 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="icons/logo.jpg"/>
-        <link rel="stylesheet" href="main.css">
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+      <!--     Fonts and icons     -->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+      <!-- Material Kit CSS -->
+      <link rel="stylesheet" href="/assets/css/material-kit.css">
+
+
+        <!-- <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="elements.css">
-        <meta charset="utf-8">
+        <meta charset="utf-8">-->
         <title>Nell</title>
     </head>
     <body>
-      <div id="loading-scren" style="display: block">
+      <div id="loading-screen" style="display: block">
         <div class="loading"></div>
       </div>
-
-
-      <div id="error">
-        <div id="error-icon">
-          <img class="login-icon-image" src="/icons/close1.svg" alt=""></img>
-        </div>
-        <br>
-        <br>
-        <div id="error-message">${message}</div>
+      <nav id="header" class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <img src="/icons/nell_text.png" alt="" style="height: 68px; margin-bottom:-12px; margin-top:-12px;">
+        <div class=" ml-auto" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="https://nell.co.uk">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#!/profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#!/login" id="logout-button">Log out</a>
+            </li>
+          </ul>
       </div>
+    </nav>
 
-      <div id="message">
-        <div id="message-icon">
-          <img class="login-icon-image" src="/icons/close2.svg" alt=""></img>
-        </div>
-        <br>
-        <br>
-        <div id="message-message">${message}</div>
+    <div id="main" class="container"></div>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        © 2018. All rights reserved. Nell Natural Elements.
       </div>
+    </footer>
 
-      <div id="header">
-              <img src="/icons/nell_text.png" alt="" style="height: 68px; margin-bottom:-12px; margin-top:-12px;">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="//unpkg.com/navigo@6"></script>
+    <script type="text/javascript" src="global.js"></script>
+    <script type="text/javascript" src="auxx.js"></script>
+    <script type="text/javascript" src="actions.js"></script>
+    <script type="text/javascript" src="elements.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 
-          <div id="header-icon-holder">
-            <!--
-            <a class="header-icon icon tooltip" href="/#!/report" id="logout-button">
-                <span class="tooltiptext">My reports</span>
-                <img class="icon-image" src="/icons/report.svg" alt=""></img>
-            </a>
-            -->
+    <!--   Core JS Files   -->
+    <script src="/assets/js/core/jquery.min.js"></script>
+    <script src="/assets/js/core/popper.min.js"></script>
+    <script src="/assets/js/bootstrap-material-design.js"></script>
 
-            <a class="header-icon icon tooltip" href="/#!/login" id="logout-button">
-                <span class="tooltiptext">Log out</span>
-                <img class="icon-image" src="/icons/logout.svg" alt=""></img>
-            </a>
+    <!-- Plugin for Date Time Picker and Full Calendar Plugin-->
+    <script src="/assets/js/plugins/moment.min.js"></script>
 
-            <a class="header-icon icon tooltip" href="https://nell.co.uk/collections/all">
-                <span class="tooltiptext">Store</span>
-                <img class="icon-image" src="/icons/shop.svg" alt=""></img>
-            </a>
+    <!-- Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+    <script src="/assets/js/plugins/bootstrap-selectpicker.js"></script>
 
-            <a class="header-icon icon tooltip" href="/#!/profile">
-                <span class="tooltiptext">My profile</span>
-                <img class="icon-image" src="/icons/profile.svg" alt=""></img>
-            </a>
-          </div>
-      </div>
+    <!-- Plugin for Tags, full documentation here: http://xoxco.com/projects/code/tagsinput/  -->
+    <script src="/assets/js/plugins/bootstrap-tagsinput.js"></script>
 
-      <div id="main"></div>
+    <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+    <script src="/assets/js/plugins/jasny-bootstrap.min.js"></script>
 
-      <div id="footer">© 2018. All rights reserved. Nell Natural Elements.</div>
+    <!-- Plugin for Small Gallery in Product Page -->
+    <script src="/assets/js/plugins/jquery.flexisel.js"></script>
 
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
-      <script src="//unpkg.com/navigo@6"></script>
-      <script type="text/javascript" src="global.js"></script>
-      <script type="text/javascript" src="aux.js"></script>
-      <script type="text/javascript" src="actions.js"></script>
-      <script type="text/javascript" src="elements.js"></script>
-      <script type="text/javascript" src="main.js"></script>
+    <!-- Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="/assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+
+    <!-- Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="/assets/js/plugins/nouislider.min.js"></script>
+
+    <!-- Material Kit Core initialisations of plugins and Bootstrap Material Design Library -->
+    <script src="/assets/js/material-kit.js?v=2.0.0"></script>
     </body>
 </html>

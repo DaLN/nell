@@ -147,7 +147,7 @@ a {
 }
 
 /* LOADING */
-#loading-scren {
+#loading-screen {
   z-index: 255;
   width: 100vw;
   height: 140vh;

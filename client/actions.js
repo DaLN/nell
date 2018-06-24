@@ -44,16 +44,16 @@ const display_message = (message) => {
 }
 
 const render_loading = async (ms) => {
-  document.getElementById('loading-scren').style.display = 'block';
+  document.getElementById('loading-screen').style.display = 'block';
   await sleep(ms);
-  document.getElementById('loading-scren').style.display = 'none';
+  document.getElementById('loading-screen').style.display = 'none';
 }
 
 const start_loading = () => {
-    document.getElementById('loading-scren').style.display = 'block';
+    document.getElementById('loading-screen').style.display = 'block';
     window.scrollTo(0,0);
 }
-const stop_loading = () => document.getElementById('loading-scren').style.display = 'none';
+const stop_loading = () => document.getElementById('loading-screen').style.display = 'none';
 
 const fetch_with_loading = async (request) => {
   start_loading();
@@ -130,7 +130,7 @@ const init_report = async (id) => {
     _currid = _data['rows'][i]['id'];
 
     if (_data['rows'][i]['type'] === 'blood') {
-      document.getElementById('report-sheet').insertAdjacentHTML('afterbegin', blood_static_info());
+      document.getElementById('blood-report').insertAdjacentHTML('afterbegin', blood_static_info());
       const data = _data['contents'][i].split('\r\n');
 
       let n = 0;
@@ -139,7 +139,7 @@ const init_report = async (id) => {
         const pair = point.split(',');
         const range = _blood_ranges[pair[0]]
         if (pair[1] !== undefined && range !== undefined) {
-          document.getElementById('report-sheet').insertAdjacentHTML('beforeend',
+          document.getElementById('blood-report').insertAdjacentHTML('beforeend',
             `${blood_info_box(pair)} <div class="blood-chart-wrapper">
             <canvas class="blood-chart" id="blood-chart-${n}"></canvas></div>`);
             const ctx = document.getElementById(`blood-chart-${n}`);
@@ -147,11 +147,11 @@ const init_report = async (id) => {
         }
       }
     } else {
-      document.getElementById('report-sheet').insertAdjacentHTML('afterbegin', dna_static_info());
+      document.getElementById('dna-report').insertAdjacentHTML('afterbegin', dna_static_info());
       for (let obj of _data['contents'][i]) {
         const element = dna_info_box(obj);
         if (element !== false) {
-          document.getElementById('report-sheet').innerHTML += element;
+          document.getElementById('dna-report').innerHTML += element;
         }
       }
     }
@@ -159,27 +159,25 @@ const init_report = async (id) => {
   } else {
     document.getElementById('validate-button').style.display = 'none';
     document.getElementById('reports-holder').style.display = 'none';
-    document.getElementById('report-sheet').insertAdjacentHTML('afterbegin', blood_static_info());
+    document.getElementById('blood-report').insertAdjacentHTML('afterbegin', blood_static_info());
     let n = 0;
     for (point of _last_blood['content'].split('\r\n')) {
       n++;
       const pair = point.split(',');
       const range = _blood_ranges[pair[0]]
       if (pair[1] !== undefined && range !== undefined) {
-        document.getElementById('report-sheet').insertAdjacentHTML('beforeend',
+        document.getElementById('blood-report').insertAdjacentHTML('beforeend',
           `${blood_info_box(pair)} <div class="blood-chart-wrapper">
           <canvas class="blood-chart" id="blood-chart-${n}"></canvas></div>`);
           const ctx = document.getElementById(`blood-chart-${n}`);
           bar_chart_vitamin_report([point], ctx, range[0], range[1]);
       }
     }
-    document.getElementById('report-sheet').insertAdjacentHTML('beforeend','<br><br><br><br><br>');
-    document.getElementById('report-sheet').insertAdjacentHTML('beforeend', dna_static_info());
-    document.getElementById('report-sheet').insertAdjacentHTML('beforeend','<br><br><br>');
+    document.getElementById('dna-report').insertAdjacentHTML('beforeend', dna_static_info());
     for (let obj of _last_dna['content']) {
       const element = dna_info_box(obj);
       if (element !== false) {
-        document.getElementById('report-sheet').insertAdjacentHTML('beforeend', element);
+        document.getElementById('dna-report').insertAdjacentHTML('beforeend', element);
       }
     }
   }

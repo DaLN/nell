@@ -63,7 +63,7 @@ const login = async (req, res) => {
       res.cookie('role', role, {maxAge: 10 * 365 * 24 * 60 * 60 * 1000, httpOnly: false });
       res.send({'success':true, 'auth_token': auth_token, 'role': role});
     } else {
-      res.send({'success':false, 'error': 'Wrong passowrd for this email !'});
+      res.send({'success':false, 'error': 'Wrong password for this email !'});
     }
 
   } catch(err) {
