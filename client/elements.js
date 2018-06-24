@@ -1,44 +1,32 @@
 /* Insert some view */
 login_view = () =>
-  `<button class="btn btn-round" data-toggle="modal" data-target="#loginModal">
-    Login<i class="material-icons">assignment</i>
-
-</button>
-
-<div class="modal fade" id="loginModal" tabindex="-1" role="">
-    <div class="modal-dialog modal-login" role="document">
-        <div class="modal-content">
-            <div class="card card-signup card-plain">
-                <div class="modal-body">
-                    <form class="form" method="" action="">
-                        <div class="card-body">
-                            <div class="form-group bmd-form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">email</i>
-                                    </span>
-                                    <input type="text" class="form-control" placeholder="Email..."  id="email">
-                                </div>
-                            </div>
-
-                            <div class="form-group bmd-form-group">
-                                <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="material-icons">lock_outline</i>
-                                    </span>
-                                    <input type="password" placeholder="Password..." class="form-control" id="password">
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <a class="btn btn-primary btn-link btn-wd btn-lg" id="login-button">Get Started</a>
-                </div>
+  `<div class="card card-signup card-plain">
+    <div class="modal-body">
+      <form class="form" method="" action="">
+        <div class="card-body">
+          <div class="form-group bmd-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">email</i>
+              </span>
+              <input type="text" class="form-control" placeholder="Email..."  id="email">
             </div>
+          </div>
+          <div class="form-group bmd-form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="material-icons">lock_outline</i>
+              </span>
+              <input type="password" placeholder="Password..." class="form-control" id="password">
+            </div>
+          </div>
         </div>
-    </div>
-</div>`
+    </form>
+  </div>
+  <div class="modal-footer justify-content-center">
+    <a class="btn btn-primary btn-link btn-wd btn-lg" id="login-button">Get Started</a>
+  </div>
+  </div>`
 
 const dna_info_box = (obj) => {
   if (obj['effect'] === undefined || obj['supplement info'] === undefined || obj['supplement'] === undefined) {
