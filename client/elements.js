@@ -1,31 +1,28 @@
 /* Insert some view */
 login_view = () =>
-  `<div class="card card-signup card-plain">
-    <div class="modal-body">
+`<div class="card">
+    <div class="card-body">
       <form class="form" method="" action="">
-        <div class="card-body">
-          <div class="form-group bmd-form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="material-icons">email</i>
-              </span>
-              <input type="text" class="form-control" placeholder="Email..."  id="email">
-            </div>
-          </div>
-          <div class="form-group bmd-form-group">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="material-icons">lock_outline</i>
-              </span>
-              <input type="password" placeholder="Password..." class="form-control" id="password">
-            </div>
-          </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="material-icons">email</i>
+          </span>
+          <input type="text" class="form-control" placeholder="Email..."  id="email">
         </div>
-    </form>
-  </div>
-  <div class="modal-footer justify-content-center">
-    <a class="btn btn-primary btn-link btn-wd btn-lg" id="login-button">Get Started</a>
-  </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <i class="material-icons">lock_outline</i>
+          </span>
+          <input type="password" placeholder="Password..." class="form-control" id="password">
+        </div>
+      </div>
+      <div class="form-group">
+        <a class="btn btn-transparent btn-link btn-wd btn-lg" id="login-button">Login</a>
+      </div>
+    </div>
   </div>`
 
 const dna_info_box = (obj) => {
@@ -143,23 +140,25 @@ const dna_static_info = () => {
 
 const upload_view = () => {
   return `<div id="upload-view" class="card">
-  <form action="/upload_report" method="post" enctype="multipart/form-data" id="upload-form">
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Select a file type</label>
-      <select class="form-control" name="type" type="text">
-        <option value="blood">Blood Tests</option>
-        <option value="dna">DNA Sequence</option>
-      </select>
+    <div class="card-body">
+      <form action="/upload_report" method="post" enctype="multipart/form-data" id="upload-form">
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select a file type</label>
+          <select class="form-control" name="type" type="text">
+            <option value="blood">Blood Tests</option>
+            <option value="dna">DNA Sequence</option>
+          </select>
+        </div>
+        <div class="form-group form-file-upload form-file-simple bg-transparent">
+          <input type="text" class="form-control inputFileVisible" placeholder="Select file...">
+          <input type="file" name="file" class="inputFileHidden">
+      </div>
+        <div class="form-group">
+          <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <button type="submit" id="upload-button" class="btn btn-transparent">Submit</button>
+      </form>
     </div>
-    <div class="form-group form-file-upload form-file-simple bg-transparent">
-      <input type="text" class="form-control inputFileVisible" placeholder="Select file...">
-      <input type="file" name="file" class="inputFileHidden">
-  </div>
-    <div class="form-group">
-      <input type="email" name="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <button type="submit" id="upload-button" class="btn btn-transparent">Submit</button>
-  </form>
   </div>`
 }
